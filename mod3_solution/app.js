@@ -33,7 +33,7 @@ NarrowItDownController.$inject = ['MenuSearchService'];
 
     Ctrl1.title = "Menu Items";
     Ctrl1.items = "";
-    
+
     Ctrl1.getMatchedMenuItems = function (searchTerm) {
 
         Ctrl1.nodatafound = "";
@@ -70,7 +70,7 @@ function MenuSearchService($http, ApiPath) {
 
     var response = $http({
         method: "GET",
-        url: ApiPath
+        url: "https://davids-restaurant.herokuapp.com/menu_items.json"
       }).then(function successCallback(response) {
 
 //console.log("hhhh==" +response.data.menu_items.length);

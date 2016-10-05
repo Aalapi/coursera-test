@@ -1,6 +1,10 @@
+<br>
 <h3>{{ Ctrl1.title }}</h3>
+<BR>
   <span ng-repeat="item in Ctrl1.items">
   {{ item.name }} =====> {{ item.description }}
   <button ng-click="Ctrl1.onRemove({index: $index});">Remove Item</button>
+  <br>
 </span>
+<br>
 <div class="error">{{ Ctrl1.nodatafound }}</div>
