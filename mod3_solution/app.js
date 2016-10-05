@@ -84,6 +84,7 @@ function MenuSearchService($http, ApiPath) {
                   if (response.data.menu_items[i].description.indexOf(srchTerm) > 1)
                   {
                     var item = {
+                        sname:response.data.menu_items[i].short_name,
                         name: response.data.menu_items[i].name,
                         description: response.data.menu_items[i].description
                       };
