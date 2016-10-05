@@ -7,7 +7,6 @@ angular.module('NarrowItDownApp', [])
 .directive('foundItems', FoundItemsDirective)
 .constant('ApiPath', "https://davids-restaurant.herokuapp.com");
 
-
 function FoundItemsDirective() {
   var ddo = {
     templateUrl: 'foundItems.html',
