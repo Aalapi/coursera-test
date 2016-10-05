@@ -1,0 +1,12 @@
+<br>
+<h3>{{ Ctrl1.title }}</h3>
+<BR>
+<br>
+<table border="1">
+  <tr ng-repeat="item in Ctrl1.items">
+    <td> {{ item.name }} </td>
+    <td>{{ item.description }} </td>
+    <td><button ng-click="Ctrl1.onRemove({index: $index});">Remove Item</button></td>
+  </tr>
+</table>
+<div class="error">{{ Ctrl1.nodatafound }}</div>
