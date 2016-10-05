@@ -5,7 +5,7 @@ angular.module('NarrowItDownApp', [])
 .controller ('NarrowItDownController', NarrowItDownController)
 .service ('MenuSearchService', MenuSearchService)
 .directive('foundItems', FoundItemsDirective)
-.constant('ApiPath', "https://davids-restaurant.herokuapp.com/menu_items.json");
+.constant('ApiPath', "https://davids-restaurant.herokuapp.com");
 
 
 function FoundItemsDirective() {
@@ -70,7 +70,7 @@ function MenuSearchService($http, ApiPath) {
 
     var response = $http({
         method: "GET",
-        url: "https://davids-restaurant.herokuapp.com/menu_items.json"
+         url: (ApiPath + "/menu_items.json"),
       }).then(function successCallback(response) {
 
 //console.log("hhhh==" +response.data.menu_items.length);
