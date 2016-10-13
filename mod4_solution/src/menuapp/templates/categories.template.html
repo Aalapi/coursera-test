@@ -1,0 +1,7 @@
+<ul>
+  <li ng-repeat="item in $ctrl.items.data"
+      ui-sref="itemDetail({catShortName: item.short_name})">
+    {{ item.short_name }} - {{ item.name }}
+
+  </li>
+</ul>
