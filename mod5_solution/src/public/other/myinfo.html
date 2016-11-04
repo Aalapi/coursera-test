@@ -1,0 +1,39 @@
+<div class="container" >
+  <h3 id="signup-title" class="text-center">
+    Registartion Information
+  </h3>
+<br>
+<div ng-if="MyInfoCtrl.regisData.length">
+<fieldset>
+  <label class ="infoLabel1"> First Name :</label>
+  <label class ="infoLabel2" > {{MyInfoCtrl.regisData[0].firstname}} </label>
+</fieldset>
+
+<fieldset>
+  <label class ="infoLabel1"> Last Name :</label>
+  <label class ="infoLabel2"> {{MyInfoCtrl.regisData[0].lastname}} </label>
+</fieldset>
+
+<fieldset>
+  <label class ="infoLabel1"> Email :</label>
+  <label class ="infoLabel2"> {{MyInfoCtrl.regisData[0].email}} </label>
+</fieldset>
+
+<fieldset>
+  <label class ="infoLabel1"> Phone :</label>
+  <label class ="infoLabel2"> {{MyInfoCtrl.regisData[0].phone}} </label>
+</fieldset>
+
+<fieldset>
+  <label class ="infoLabel1"> Favorite Dish:</label>
+  <label class ="infoLabel2"> {{MyInfoCtrl.regisData[0].favdishSN}} - {{MyInfoCtrl.regisData[0].name}} - {{MyInfoCtrl.regisData[0].description}}</label>
+  <img class="img-responsive" width="250" height="150" ng-src="{{MyInfoCtrl.basePath}}/images/{{MyInfoCtrl.regisData[0].favdishSN.toUpperCase()}}.jpg"  alt="{{MyInfoCtrl.regisData.favdishSN}}">
+
+</fieldset>
+</div>
+
+<div ng-if="!MyInfoCtrl.regisData.length">
+    Not signuped yet! <a ui-sref="public.signup">Sign-up</a> Now.
+</div>
+
+</div>
